@@ -1,5 +1,6 @@
 //Minimum no. of Jumps to reach end of an array
 //O(n*n)
+//Space=O(n)
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
