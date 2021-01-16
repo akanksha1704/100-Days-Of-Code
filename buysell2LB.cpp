@@ -29,3 +29,31 @@ int main(){
 
 
 return 0;}
+
+
+//t(n)=O(n)
+//s=O(1)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+        cin>>a[i];
+        int b1,b2,p1,p2;
+        b1=b2=INT_MAX;
+        p1=p2=0;
+        for(int i=0;i<n;i++){
+            b1=min(b1,a[i]);
+
+            p1=max(p1,a[i]-b1);
+
+            b2=min(b2,a[i]-p1);
+
+            p2=max(p2,a[i]-b2);
+        }
+
+        cout<<p2<<endl;
+return  0;}
