@@ -65,3 +65,32 @@ int main()
         cout<<row<<endl;
 return 0;
 }
+
+//T(n)=O(n+m)
+//Space=O(1)
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,m;
+    cin>>n>>m;
+    int x,i,j;
+    int a[n][m];
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++){
+            cin>>a[i][j];
+        }
+    }
+
+   j=m-1;
+   while(j>=0 && a[0][j]==1)
+        j--;
+
+   int row=0;
+   for(int i=1;i<n;i++){
+    while(j>=0 && a[i][j]==1){
+        j--;
+        row=i;
+    }
+   }
+   cout<<row;
+return 0;}
